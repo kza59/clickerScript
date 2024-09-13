@@ -6,7 +6,7 @@ import os
 import subprocess
 import logging
 import config
-from config import PATH_NAME, PROCESS_NAME
+from config import PATH_NAME, PROCESS_NAME, BUTTON_X, BUTTON_Y
 
 app_path = PATH_NAME
 
@@ -23,7 +23,7 @@ def kill_process(process_name):
     print(f"No process with name '{process_name}' found.")
 time.sleep(8)
 
-button_x, button_y = 700, 610
+button_x, button_y = BUTTON_X, BUTTON_Y
 move_cursor(button_x, button_y)
 pyautogui.click(button_x, button_y)
 
